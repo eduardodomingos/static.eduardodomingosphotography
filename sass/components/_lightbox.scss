@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the lightbox component.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+.lightbox {
+    .lightbox__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin: 0;
+        padding: 0;
+        @include mq(tablet) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        li {
+            overflow: hidden;
+            border-radius: $border-radius;
+        }
+        img {
+            width: 100%;
+            transition: transform .3s;
+            cursor: pointer;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
