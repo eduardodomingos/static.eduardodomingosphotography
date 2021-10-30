@@ -6,13 +6,15 @@
 
 
 .section {
-    padding: var(--section-spacing) 0;
-    border-bottom: 1px solid color(neutral, 200);
-
+    .section__inner {
+        padding: var(--section-spacing) 0;
+        border-bottom: 1px solid color(neutral, 200);
+    }
     .section__header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 2rem;
     }
     .section__title {
         font: bold 1.125rem / 1.2 $text-font-stack;
