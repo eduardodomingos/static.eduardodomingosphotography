@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains the basic typographic rules
+// -----------------------------------------------------------------------------
+@use "sass:map";
+@use '../abstracts' as *;
+
+
+/// Basic typography style for copy text
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font: normal 1rem / 1.5 $text-font-stack;
+    color: color(neutral, 800);
+}
+
+
+
+/// Basic typography style for headings
+@include headings() {
+    line-height: 1.2;
+    color: color(neutral, 900);
+}
+
+
+
+/// Basic typography style for links
+a {
+    color: color(primary, 400);
+    text-decoration: none;
+    @include on-event {
+      color: color(primary, 700);
+      text-decoration: underline;
+    }
+  }

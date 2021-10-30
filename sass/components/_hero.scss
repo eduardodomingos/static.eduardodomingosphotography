@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// The hero component shows a massive text with some cta buttons.
+// It has an image as background.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.hero { 
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    > .container {
+        padding-top: var(--hero-spacing);
+        padding-bottom: var(--hero-spacing);
+    }
+    .hero__title {
+        color: color(neutral, 100);
+        font: bold 1.9rem / 1.15 $text-font-stack;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+    }
+    .hero__links {
+        display: flex;
+        justify-content: center;
+        > * + * {
+            margin-left: 1em;
+        }
+    }
+}

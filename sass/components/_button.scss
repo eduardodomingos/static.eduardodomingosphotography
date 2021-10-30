@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.button {
+    background-color: color(primary, 400);
+    font-size: .875rem;
+    font-weight: bold;
+    color: color(neutral, 100);
+    text-transform: uppercase;
+    padding: 1em;
+    border-radius: $border-radius;
+    &.button--thin {
+        padding: .5em;
+    }
+
+    &.button--hollow {
+        background-color: transparent;
+        color: color(primary, 400);
+        border: 1px solid color(primary, 400);
+    }
+}

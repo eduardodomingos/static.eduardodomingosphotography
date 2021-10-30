@@ -1,0 +1,59 @@
+// -----------------------------------------------------------------------------
+// The burger component which is usually used to toggle navigation visibiity
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    @include mq(desktop) {
+        display: none;
+    }
+    @include when-inside('.primary-header') {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+    }
+
+    span {
+        display: inline-block;
+        position: relative;
+        width: 1.5rem;
+        height: .1875rem;
+        background-color: color(neutral, 800);
+        border-radius: $border-radius;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: .5rem;
+            width: 1.5rem;
+            height: .1875rem;
+            background-color: color(neutral, 800);
+            border-radius: $border-radius;
+            transition: transform .3s;
+        }
+        &::after {
+            bottom: -.5rem
+        }
+        @include when-inside('.primary-nav-is-open') {
+            background-color: transparent;
+            &::before,
+            &::after {
+                bottom: 0;
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

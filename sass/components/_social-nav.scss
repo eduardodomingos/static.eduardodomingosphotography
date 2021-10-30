@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+// The social nav that contains the social media links
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.social-nav {
+    --social-bg: #{color(neutral, 800)};
+    --social-bg--hover: #{color(neutral, 900)};
+
+    display: flex;
+    margin: 0;
+    padding: 0;
+    @include when-inside('.primary-footer') {
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        background-color: var(--social-bg);
+        color: color(neutral, 100);
+        @include on-event() {
+            background-color: var(--social-bg--hover);
+        }
+        .icon {
+            width: 1.25em;
+            height: 1.25em;
+        }
+    }
+    
+    li + li {
+        margin-left: 1em;
+    }
+
+    .facebook a {
+        --social-bg: #{color(socials, facebook)};
+        --social-bg--hover: #{darken(color(socials, facebook), 10%)};
+    }
+
+    .twitter a {
+        --social-bg: #{color(socials, twitter)};
+        --social-bg--hover: #{darken(color(socials, twitter), 10%)};
+    }
+
+    .youtube a {
+        --social-bg: #{color(socials, youtube)};
+        --social-bg--hover: #{darken(color(socials, youtube), 10%)};
+    }
+
+    .instagram a {
+        --social-bg: #{color(socials, instagram)};
+        --social-bg--hover: #{darken(color(socials, instagram), 10%)};
+    }
+}

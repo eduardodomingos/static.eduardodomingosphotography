@@ -1,0 +1,11 @@
+@use '../abstracts' as *;
+
+:root {
+  --hero-spacing: 3.5rem;
+  --section-spacing: 3.5rem;
+
+  @include mq(tablet) {
+    --hero-spacing: 7rem;
+    --section-spacing: 3.5rem;
+  }
+}

@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+.primary-footer {
+    /**
+    * 1. We have to add 3.5rem to the desired padding which is the height of the secondary nav which is only visibe on mobile
+    */
+    background-color: color(neutral, 900);
+    color: color(neutral, 100);
+    font-size: .875rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem + 3.5rem; /* 1 */
+    @include mq(desktop) {
+        padding-bottom: 2rem; /* 1 */
+    }
+}

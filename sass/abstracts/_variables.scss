@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+/// Regular font family
+$text-font-stack: 'Poppins', sans-serif;
+
+
+
+
+/// Colors map
+$colors: (
+    primary: (
+        400: hsl(205, 77%, 50%),
+        700: hsl(205, 77%, 30%),
+        900: hsl(205, 77%, 23%)
+    ),
+    neutral: (
+        100: hsl(0, 0%, 100%),
+        200: hsl(0, 0%, 87%),
+        800: hsl(0, 0%, 20%),
+        900: hsl(0, 0%, 15%) 
+    ),
+    socials: (
+        facebook: #1877f2,
+        twitter: #1da1f2,
+        youtube: #ff0000,
+        instagram: #c32aa3,
+        whatsapp: #25d366,
+        500px: #0099e5
+    )
+);
+
+
+
+
+/// Container's maximum width
+$max-width: 62.5rem;
+
+
+
+
+/// Breakpoints map
+$breakpoints: (
+  phone: 20em,
+  tablet: 48em,
+  desktop: 64em, 
+);
+
+
+
+/// Global border radius
+$border-radius: .25rem;

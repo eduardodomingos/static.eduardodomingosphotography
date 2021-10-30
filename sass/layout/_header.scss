@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+.primary-header {
+    box-shadow: 0 .25rem 1.25rem rgba(black, .15);
+    /**
+    * 1. Set positioning so elements like burger can be absolutely positioned
+    */
+    > .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative; /* 1 */
+        height: 3.5rem;
+    }
+
+    .primary-nav {
+        position: fixed;
+        top: 3.5rem;
+        right: 0;
+        z-index: 999;
+        padding: 1rem;
+        width: 100vw;
+        height: calc(100vh - 3.5rem);
+        background-color: color(neutral, 100);
+        border-top: .1875rem solid color(primary, 400);
+        transform: translateX(100%);
+        transition: transform .3s;
+        box-shadow: 0px .25rem  1.25rem  rgba(black, 0.25);
+        opacity: 0;
+        @include when-inside('.primary-nav-is-open') {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        @include mq(desktop) {
+            position: static;
+            z-index: auto;
+            padding: 0;
+            width: auto;
+            height: auto;
+            background-color: transparent;
+            border-top: none;
+            transform: none;
+            transition: none;
+            box-shadow: none;
+            opacity: 1;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            @include mq(desktop) {
+                flex-direction: row;
+            }
+        }
+        li {
+            &.current {
+                font-weight: bold;
+            }
+            & + li {
+                border-top: 1px solid color(neutral, 200);
+                @include mq(desktop) {
+                    border: none;
+                }
+            }
+        }
+        a {
+            display: block;
+            padding: 1em;
+            font-size: .875rem;
+            color: color(neutral, 800);
+            
+            @include on-event {
+                text-decoration: none;
+                opacity: .8;
+            }
+        }
+    }
+
+    .secondary-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3.5rem;
+        z-index: 9999;
+        background-color: color(primary, 900);
+        
+        @include mq(desktop) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: .75rem;
+            color: color(neutral, 100);
+            padding: .5em 1em;
+            @include on-event {
+                text-decoration: none;
+                opacity: .8;
+            }
+        }
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
+}

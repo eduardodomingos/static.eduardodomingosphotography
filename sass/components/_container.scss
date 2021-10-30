@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// The container component constrains the content area to a max width
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+/// Main content container
+ .container {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+} 

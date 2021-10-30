@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@use 'variables' as *;
+
+
+
+
+/// CManaging Responsive Breakpoints with Sass Maps
+/// https://jonsuh.com/blog/managing-responsive-breakpoints-with-sass-maps/
+/// @author Jonathan Suh
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  // If $mq-breakpoint is a key that exists in
+  // $mq-breakpoints, get and use the value
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+
+
+
+/// Create all specified heading styles in one go.
+/// @author Harry Roberts
+@mixin headings($from: 1, $to: 6) {
+    %base-heading {
+        @content;
+    }
+    @if $from >= 1 and $to <= 6{
+        @for $i from $from through $to{
+            h#{$i} {
+                @extend %base-heading;
+            }
+        }
+    }
+}
+
+
+
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+    @if $self {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        @content;
+      }
+    } @else {
+      &:hover,
+      &:active,
+      &:focus {
+        @content;
+      }
+    }
+  }
+  
+  /// Make a context based selector a little more friendly
+  /// @author Kitty Giraudel
+  /// @param {String} $context
+  @mixin when-inside($context) {
+    #{$context} & {
+      @content;
+    }
+  }
+
+
+
+/// Make a pseudo elements a little more friendly
+/// @author Kevin Powell
+  @mixin pseudo(
+    $loc: before, 
+    $content: '', 
+    $pos: absolute,
+    $top: 0,
+    $bottom: 0,
+    $left: 0,
+    $right: 0
+  ) {
+  position: relative;
+
+  &::#{$loc} {
+    content: $content;
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left:$left;
+    right: $right;
+    @content;
+  }
+}
