@@ -11,9 +11,8 @@
     text-align: center;
     background-size: cover;
     background-position: center;
-    > .container {
-        padding-top: var(--hero-spacing);
-        padding-bottom: var(--hero-spacing);
+    .hero__content {
+        padding: var(--hero-spacing) 0;
     }
     .hero__title {
         color: color(neutral, 100);
