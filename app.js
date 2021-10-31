@@ -8,4 +8,4 @@ let options = {
 // construct an instance of Headroom, passing the element
 var headroom  = new Headroom(myElement, options);
 // initialise
-headroom.init();    
+headroom.init();

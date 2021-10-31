@@ -31,10 +31,20 @@ body {
 
 /// Basic typography style for links
 a {
-    color: color(primary, 400);
-    text-decoration: none;
-    @include on-event {
-      color: color(primary, 300);
-      text-decoration: underline;
-    }
+  color: color(primary, 400);
+  text-decoration: none;
+  @include on-event {
+    color: color(primary, 300);
+    text-decoration: underline;
   }
+}
+
+
+
+
+/// Basic typography style for links
+// p:not([class]),
+// ul:not([class]),
+// li:not([class]) {
+//   max-width: 60ch;
+// }
