@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// A label displays content classification
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.label {
+    display: inline-block;
+    padding: .125em;
+    background-color: color(accent, yellow);
+    font-weight: bold;
+    border-radius: $border-radius;
+}

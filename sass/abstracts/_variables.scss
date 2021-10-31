@@ -14,9 +14,12 @@ $text-font-stack: 'Poppins', sans-serif;
 /// Colors map
 $colors: (
     primary: (
+        300: hsl(205, 77%, 60%),
         400: hsl(205, 77%, 50%),
-        700: hsl(205, 77%, 30%),
         900: hsl(205, 77%, 23%)
+    ),
+    accent: (
+        yellow: hsl(50, 100%, 57%)
     ),
     neutral: (
         100: hsl(0, 0%, 100%),
@@ -38,7 +41,7 @@ $colors: (
 
 
 /// Container's maximum width
-$max-width: 62.5rem;
+$max-width: 73.75rem;
 
 
 

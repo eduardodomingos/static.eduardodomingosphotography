@@ -15,10 +15,13 @@
         padding: var(--hero-spacing) 0;
     }
     .hero__title {
+        max-width: 50rem;
+        margin: 0 auto 2rem;
         color: color(neutral, 100);
-        font: bold 1.9rem / 1.15 $text-font-stack;
+        font-weight: bold;
+        font-size: clamp(1.9rem, calc(1rem + 5vw), 3rem);
+        line-height: 1.15;
         text-transform: uppercase;
-        margin-bottom: 2rem;
     }
     .hero__links {
         display: flex;

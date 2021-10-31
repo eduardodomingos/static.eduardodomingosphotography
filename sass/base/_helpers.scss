@@ -4,8 +4,11 @@
 @use '../abstracts' as *;
 
 
-
-/// Svg icon heper class
+/**
+ * Svg icon heper class
+ * 1. Pull down the icon by 12.5%
+ *    See: https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+ */
 .icon {
     display: inline-block;
     width: 1em;
@@ -13,6 +16,10 @@
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+    &.icon--baseline {
+        position: relative;
+        top: .125em; /* 1 */ 
+    }
 }
 
 
@@ -29,16 +36,6 @@
 //     text-indent: 101%;
 //     white-space: nowrap;
 //   }
-
-.hidden-on-phones {
-    @media screen and (min-width: map-get($breakpoints, phone)) and (max-width: map-get($breakpoints, tablet) - .0626em) {
-        display: inline-block;
-        overflow: hidden;
-        padding: 0; /* 1 */
-        text-indent: 101%;
-        white-space: nowrap;
-    }
-}
   
 /**
 * Hide element while making it readable for screen readers

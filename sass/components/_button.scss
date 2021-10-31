@@ -14,6 +14,14 @@
     text-transform: uppercase;
     padding: 1em;
     border-radius: $border-radius;
+    @include on-event {
+        background-color: color(primary, 300);
+        color: color(neutral, 100);
+        text-decoration: none;
+    }
+    @include mq(desktop) {
+        font-size: 1rem;
+    }     
     &.button--thin {
         padding: .5em;
     }
@@ -22,5 +30,9 @@
         background-color: transparent;
         color: color(primary, 400);
         border: 1px solid color(primary, 400);
+        @include on-event {
+            color: color(primary, 300);
+            border: 1px solid color(primary, 300);
+        }
     }
 }

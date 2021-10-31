@@ -19,6 +19,12 @@ body {
 @include headings() {
     line-height: 1.2;
     color: color(neutral, 900);
+    a {
+      color: color(neutral, 900);
+      @include on-event {
+        text-decoration: none;
+      }
+    }
 }
 
 
@@ -28,7 +34,7 @@ a {
     color: color(primary, 400);
     text-decoration: none;
     @include on-event {
-      color: color(primary, 700);
+      color: color(primary, 300);
       text-decoration: underline;
     }
   }
