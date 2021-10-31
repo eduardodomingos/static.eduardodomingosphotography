@@ -18,4 +18,44 @@
     @include mq(desktop) {
         padding-bottom: 2rem; /* 1 */
     }
+
+    .secondary-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3.5rem;
+        z-index: 9999;
+        background-color: color(primary, 900);
+        box-shadow: 0px -.25rem  1.25rem  rgba(black, 0.25);
+        
+        @include mq(desktop) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: .75rem;
+            color: color(neutral, 100);
+            padding: .5em 1em;
+            @include on-event {
+                text-decoration: none;
+                opacity: .8;
+            }
+        }
+        .icon {
+            width: 1.5em;
+            height: 1.5em;
+        }
+    }
 }
