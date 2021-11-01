@@ -12,6 +12,10 @@
         overflow: hidden;
         border-radius: $border-radius;
         margin-bottom: 1rem;
+        cursor: pointer;
+        @include when-inside('.content-list--lightbox') {
+            margin-bottom: 0;
+        }
         img {
             width: 100%;
             transition: transform .3s;

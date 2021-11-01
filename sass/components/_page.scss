@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to a page of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.page {
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
+}
+
+.page__header {
+    text-align: center;
+}
+.page__title {
+    font: bold 1.5rem / 1.2 $text-font-stack;
+    text-transform: uppercase;
+    @include mq(desktop) {
+        font-size: 1.875rem;
+    }
+}
+
+.page__description {
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.page__content {
+    padding-top: var(--section-spacing);
+}

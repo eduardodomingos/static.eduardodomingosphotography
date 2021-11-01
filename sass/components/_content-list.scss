@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to a listing of contents of the site/application.
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.content-list {
+    .content-list__wrapper {
+        padding: var(--section-spacing) 0;
+        border-bottom: 1px solid color(neutral, 200);
+    }
+    .content-list__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    .content-list__title {
+        font: bold 1.125rem / 1.2 $text-font-stack;
+        text-transform: uppercase;
+        @include mq(desktop) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .content-list__link {
+        margin-left: 1em;
+        flex-shrink: 0;
+    }
+
+
+    .content-list__list {
+        display: grid;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        @include mq(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mq(desktop) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &.content-list--lightbox {
+        .content-list__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            margin: 0;
+            padding: 0;
+            @include mq(tablet) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
