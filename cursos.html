@@ -7,10 +7,10 @@
     <title>Eduardo Domingos | Landscape Photography</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="home">
+<body>
     <header class="primary-header">
         <div class="container">
             <a href="./index.html" class="logo">
@@ -21,9 +21,9 @@
             </div>
             <nav class="primary-nav">
                 <ul role="list">
-                    <li class="current"><a href="./index.html">Início</a></li>
+                    <li><a href="./index.html">Início</a></li>
                     <li><a href="./portfolio.html">Portfólio</a></li>
-                    <li><a href="./cursos.html">Cursos de Edição</a></li>
+                    <li class="current"><a href="./cursos.html">Cursos de Edição</a></li>
                     <li><a href="#">Youtube</a></li>
                     <li><a href="./sobre.html">Sobre</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
@@ -32,59 +32,98 @@
         </div>
     </header>
     <main>
-        <div class="page">
+        <div class="page container">
+            <div class="page__header">
+                <p class="page__title">Cursos de Edição</p>
+                <p class="page__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae veniam velit laudantium, officia ipsum inventore sunt asperiores accusamus nam sed. Provident, molestias magnam quod maiores unde fugiat vero molestiae.</p>
+            </div>
             <div class="page__content">
-                <div class="hero" style="background-image: url('img/hero.jpg');">
-                    <div class="hero__content" style="background-color: rgba(0,0,0,0.5);">
-                        <div class="container">
-                            <p class="hero__title">Aprenda comigo a dominar todos os segredos da fotografia de paisagem</p>
-                            <div class="hero__links">
-                                <a class="button" href="./cursos.html">Cursos de Edição</a>
-                                <a class="button" href="#">No Youtube</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-list content-list--lightbox container">
+                <div class="content-list">
                     <div class="content-list__header">
-                        <p class="content-list__title">Portfólio Recente</p>
-                        <a href="./portfolio.html" class="content-list__link button button--slim button--hollow">+ Portfólio</a>
+                        <p class="content-list__title">Masterclasses</p>
                     </div>
                     <ul role="list" class="content-list__list">
                         <li>
-                            <div class="teaser">
-                                <span class="teaser__media">
-                                    <img src="img/portfolio/thumb/benagil.jpg" data-src="img/portfolio/full/benagil.jpg" alt="Algar de Benagil, Lagoa, Portugal, 2021">
-                                </span>
-                            </div>
+                            <article class="teaser">
+                                <a href="/curso.html" class="teaser__media">
+                                    <img loading="lazy" width="313" height="176" src="img/teasers/teaser1.jpg" alt="Photoshop Básico para Fotógrafos de Paisagem">
+                                </a>
+                                <div class="teaser__content">
+                                    <ul role="list" class="teaser__meta">
+                                        <li><span class="label">-5%</span> <s>100€</s> 90 €</li>
+                                        <li>
+                                            <svg class="icon icon--baseline">
+                                                <use xlink:href="#icon-clock"></use>
+                                            </svg>
+                                        2h30m</li>
+                                    </ul>
+                                    <h2 class="teaser__title"><a href="/curso.html">Photoshop Básico para Fotógrafos de Paisagem</a></h2>
+                                    <p class="teaser__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias officiis minima magnam dolores, corporis, inventore expedita enim quis accusamus recusandae assumenda repellendus! Distinctio aliquam maiores omnis possimus recusandae accusantium enim.</p>   
+                                </div>
+                            </article>
                         </li>
                         <li>
-                            <div class="teaser">
-                                <span class="teaser__media">
-                                    <img src="img/portfolio/thumb/cabo-raso.jpg" data-src="img/portfolio/full/cabo-raso.jpg" alt="Farol do Cabo Raso, Sintra, Portugal, 2020">
-                                </span>
-                            </div>
+                            <article class="teaser">
+                                <a href="/curso.html" class="teaser__media">
+                                    <img loading="lazy" width="313" height="176" src="img/teasers/teaser1.jpg" alt="Photoshop Básico para Fotógrafos de Paisagem">
+                                </a>
+                                <div class="teaser__content">
+                                    <ul role="list" class="teaser__meta">
+                                        <li><span class="label">-5%</span> <s>100€</s> 90 €</li>
+                                        <li>
+                                            <svg class="icon icon--baseline">
+                                                <use xlink:href="#icon-clock"></use>
+                                            </svg>
+                                        2h30m</li>
+                                    </ul>
+                                    <h2 class="teaser__title"><a href="/curso.html">Photoshop Básico para Fotógrafos de Paisagem</a></h2>
+                                    <p class="teaser__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias officiis minima magnam dolores, corporis, inventore expedita enim quis accusamus recusandae assumenda repellendus! Distinctio aliquam maiores omnis possimus recusandae accusantium enim.</p>   
+                                </div>
+                            </article>
                         </li>
                         <li>
-                            <div class="teaser">
-                                <span class="teaser__media">
-                                    <img src="img/portfolio/thumb/ponta-do-rosto.jpg" data-src="img/portfolio/full/ponta-do-rosto.jpg" alt="Ponta do Rosto, Madeira, Portugal, 2020">
-                                </span>
-                            </div>
+                            <article class="teaser">
+                                <a href="/curso.html" class="teaser__media">
+                                    <img loading="lazy" width="313" height="176" src="img/teasers/teaser1.jpg" alt="Photoshop Básico para Fotógrafos de Paisagem">
+                                </a>
+                                <div class="teaser__content">
+                                    <ul role="list" class="teaser__meta">
+                                        <li><span class="label">-5%</span> <s>100€</s> 90 €</li>
+                                        <li>
+                                            <svg class="icon icon--baseline">
+                                                <use xlink:href="#icon-clock"></use>
+                                            </svg>
+                                        2h30m</li>
+                                    </ul>
+                                    <h2 class="teaser__title"><a href="/curso.html">Photoshop Básico para Fotógrafos de Paisagem</a></h2>
+                                    <p class="teaser__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias officiis minima magnam dolores, corporis, inventore expedita enim quis accusamus recusandae assumenda repellendus! Distinctio aliquam maiores omnis possimus recusandae accusantium enim.</p>   
+                                </div>
+                            </article>
                         </li>
                         <li>
-                            <div class="teaser">
-                                <span class="teaser__media">
-                                    <img src="img/portfolio/thumb/salto-do-prego.jpg" data-src="img/portfolio/full/salto-do-prego.jpg" alt="Salto do Prego, Açores, Portugal, 2019">
-                                </span>
-                            </div>
+                            <article class="teaser">
+                                <a href="/curso.html" class="teaser__media">
+                                    <img loading="lazy" width="313" height="176" src="img/teasers/teaser1.jpg" alt="Photoshop Básico para Fotógrafos de Paisagem">
+                                </a>
+                                <div class="teaser__content">
+                                    <ul role="list" class="teaser__meta">
+                                        <li><span class="label">-5%</span> <s>100€</s> 90 €</li>
+                                        <li>
+                                            <svg class="icon icon--baseline">
+                                                <use xlink:href="#icon-clock"></use>
+                                            </svg>
+                                        2h30m</li>
+                                    </ul>
+                                    <h2 class="teaser__title"><a href="/curso.html">Photoshop Básico para Fotógrafos de Paisagem</a></h2>
+                                    <p class="teaser__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias officiis minima magnam dolores, corporis, inventore expedita enim quis accusamus recusandae assumenda repellendus! Distinctio aliquam maiores omnis possimus recusandae accusantium enim.</p>   
+                                </div>
+                            </article>
                         </li>
                     </ul>
                 </div>
-                <div class="content-list container">
+                <div class="content-list">
                     <div class="content-list__header">
-                        <p class="content-list__title">Cursos Online</p>
-                        <a href="./portfolio.html" class="content-list__link button button--slim button--hollow">+ Cursos</a>
+                        <p class="content-list__title">Formações Modulares</p>
                     </div>
                     <ul role="list" class="content-list__list">
                         <li>

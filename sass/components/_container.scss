@@ -7,10 +7,12 @@
 
 
 /// Main content container
+// It has a margin of 1rem until 1032px,
+// then it keeps a fixed width of 1000px width with no side margins
  .container {
+    margin: 0 1rem;
     max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    @include mq($max-width + 2rem) {
+        margin: 0 auto;
+    }
 } 

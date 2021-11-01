@@ -13,6 +13,7 @@
 
 .page__header {
     text-align: center;
+    margin-bottom: 3rem;
 }
 .page__title {
     font: bold 1.5rem / 1.2 $text-font-stack;
@@ -27,8 +28,15 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
+    font-size: 1.125rem;
 }
 
 .page__content {
-    padding-top: var(--section-spacing);
+    > *:first-child {
+        padding-top: 0;
+    }
+    > *:last-child {
+        padding-bottom: 0;
+        border: 0;
+    }
 }

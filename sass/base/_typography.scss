@@ -19,6 +19,7 @@ body {
 @include headings() {
     line-height: 1.2;
     color: color(neutral, 900);
+    --flow-spacer: 1.2em;
     a {
       color: color(neutral, 900);
       @include on-event {
@@ -48,3 +49,10 @@ a {
 // li:not([class]) {
 //   max-width: 60ch;
 // }
+
+
+
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 1em);
+}

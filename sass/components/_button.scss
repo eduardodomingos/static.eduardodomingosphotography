@@ -13,6 +13,7 @@
     color: color(neutral, 100);
     text-transform: uppercase;
     padding: 1em;
+    border: none;
     border-radius: $border-radius;
     @include on-event {
         background-color: color(primary, 300);
