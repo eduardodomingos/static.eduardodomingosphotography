@@ -1,0 +1,7 @@
+.belt{
+    max-width: 60ch;
+    &.belt--centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

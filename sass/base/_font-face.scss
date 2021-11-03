@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+
+
+
+@font-face {
+    font-family: 'icons-edp';
+    src: url('../fonts/icons-edp/icons-edp.eot?23539665');
+    src: url('../fonts/icons-edp/icons-edp.eot?23539665#iefix') format('embedded-opentype'),
+         url('../fonts/icons-edp/icons-edp.woff2?23539665') format('woff2'),
+         url('../fonts/icons-edp/icons-edp.woff?23539665') format('woff'),
+         url('../fonts/icons-edp/icons-edp.ttf?23539665') format('truetype'),
+         url('../fonts/icons-edp/icons-edp.svg?23539665#icons-edp') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,55 @@
+// -----------------------------------------------------------------------------
+// A listing displays multiple bulleted lists
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.listing {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+    @include mq(desktop) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .listing__item {
+        background-color: color(neutral, 150);
+        padding: 1.5rem 1rem;
+        border-radius: $border-radius;
+    }
+    .listing__item__header {
+        margin-bottom: 1rem;
+    }
+    .listing__item__title {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: .5em;
+    }
+    .listing__item__meta {
+        margin: 0;
+        padding: .5em;
+        background-color: color(neutral, 100);
+        font-size: .875em;
+        border-radius: $border-radius;
+        li + li {
+            margin-top: .3em;
+        }
+    }
+    .listing__item__list {
+        font-size: .875em;
+        padding-left: 1rem;
+        margin: 0;
+        li {
+            padding-left: .5em;
+            & + li {
+                margin-top: .5em;
+            }
+            &::marker { 
+                content: '\e805';
+                font-family: "icons-edp";
+                color: color(primary, 400);
+            }
+        }
+    }
+}
