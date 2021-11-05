@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file component is used to display the course table,
+// which shows the course main features
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.course-table {
+    display: grid;
+    grid-gap: 1rem;
+    @include mq(tablet) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        overflow: hidden;
+    }
+    @include mq(desktop) {
+        grid-gap: 3rem;
+    }
+    .course-table__item {
+        @include mq(tablet) {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: -1rem;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background-color: color(neutral, 200);
+            }
+        }
+        @include mq(desktop) {
+            &:before {
+                left: -1.5rem;
+            }
+        }
+    }
+    .course-table__item__key {
+        font-weight: bold;
+        color: color(primary, 400);
+        &:before {
+            content: '\e805';
+            font-family: "icons-edp";
+            color: color(primary, 400);
+            margin-right: .25em;
+        }
+    }
+    .course-table__item__value {
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    .course-table__item__content {
+        font-size: .875em;
+        ul {
+            margin: 0;
+            padding-left: .6rem;
+            li {
+                padding-left: .3em;
+                & + li {
+                    margin-top: .5em;
+                }
+                &::marker { 
+                    content: '+';
+                    font-weight: bold;
+                    color: color(primary, 300);
+                }
+            }
+        }
+    }
+}

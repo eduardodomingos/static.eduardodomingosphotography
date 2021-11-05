@@ -24,24 +24,6 @@
             }
         }
     }
-    .teaser__meta {
-        display: flex;
-        align-items: center;
-        margin: 0 0 .5em;
-        padding: 0;
-        font-size: .875em;
-        li + li {
-            margin-left: 1em;
-            &:before {
-                content: '\007C';
-                position: relative;
-                right: .5em;
-            }
-        }
-        .label {
-            margin-right: .2em;
-        }
-    }
     .teaser__title {
         font-size: 1rem;
         margin-bottom: .5em;

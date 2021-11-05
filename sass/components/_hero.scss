@@ -25,9 +25,11 @@
     }
     .hero__links {
         display: flex;
-        justify-content: center;
-        > * + * {
-            margin-left: 1em;
+        flex-direction: column;
+        gap: 1em;
+        @include mq(largePhone) {
+            flex-direction: row;
+            justify-content: center;
         }
     }
 }

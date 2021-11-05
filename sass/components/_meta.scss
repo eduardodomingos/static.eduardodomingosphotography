@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file component is used to display the meta of a content
+// -----------------------------------------------------------------------------
+
+
+
+
+.meta {
+    display: flex;
+    align-items: center;
+    margin: 0 0 .5em;
+    padding: 0;
+    font-size: .875em;
+    li + li {
+        margin-left: 1em;
+        &:before {
+            content: '\007C';
+            position: relative;
+            right: .5em;
+        }
+    }
+    .label {
+        margin-right: .2em;
+    }
+}

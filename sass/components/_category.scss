@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// The category component is used to display the content category
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+
+.category {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .75rem;
+}

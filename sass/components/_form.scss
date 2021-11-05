@@ -20,4 +20,19 @@
     input[type="submit"] {
         width: 100%;
     }
+    ul {
+        margin-bottom: 0;
+        padding-left: 1rem;
+        li {
+            padding-left: .3em;
+            & + li {
+                margin-top: .5em;
+            }
+            &::marker { 
+                content: '\e805';
+                font-family: "icons-edp";
+                color: color(primary, 300);
+            }
+        }
+    }
 }

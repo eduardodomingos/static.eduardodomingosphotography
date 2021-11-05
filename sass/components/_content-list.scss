@@ -19,15 +19,13 @@
         grid-template-columns: repeat(4, 1fr);
     }
     &.content-list--lightbox {
-        .content-list__list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 2rem;
-            margin: 0;
-            padding: 0;
-            @include mq(tablet) {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin: 0;
+        padding: 0;
+        @include mq(largePhone) {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

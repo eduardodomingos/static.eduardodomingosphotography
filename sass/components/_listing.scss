@@ -38,7 +38,7 @@
     }
     .listing__item__list {
         font-size: .875em;
-        padding-left: 1rem;
+        padding-left: 0.875rem;
         margin: 0;
         li {
             padding-left: .5em;
@@ -48,7 +48,7 @@
             &::marker { 
                 content: '\e805';
                 font-family: "icons-edp";
-                color: color(primary, 400);
+                color: color(primary, 300);
             }
         }
     }

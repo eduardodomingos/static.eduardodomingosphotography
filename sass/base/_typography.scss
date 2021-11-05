@@ -17,7 +17,7 @@ body {
 
 /// Basic typography style for headings
 @include headings() {
-    line-height: 1.2;
+    line-height: 1.15;
     color: color(neutral, 900);
     --flow-spacer: 1.2em;
     a {
