@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file content list component is used to display contents in a list
+// -----------------------------------------------------------------------------
+@use '../abstracts' as *;
+
+
+
+ 
+.lightbox {
+    .lightbox__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin: 0;
+        padding: 0;
+        @include mq(largePhone) {
+            grid-template-columns: repeat(4, 1fr); 
+        }
+    }
+    .lightbox__modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 0 1rem;
+        background-color: rgba(grey, .98);
+        z-index: 99999;
+        img {
+            max-height: 80vh;
+        }
+        figcaption {
+            margin-top: .5em;
+            font-size: .8125rem;
+            text-align: center;
+            color: color(neutral, 100);
+            opacity: .9;
+        }
+    }
+}
