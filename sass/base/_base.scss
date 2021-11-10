@@ -14,6 +14,10 @@ body {
     @include mq(desktop) {
         padding-top: 4.5rem; /* 1 */
     }
+    &.primary-nav-is-open,
+    &.lightbox-is-open {
+        overflow: hidden;
+    }
 }
 
 
@@ -50,6 +54,7 @@ textarea {
     padding: .7em;
 }
 
+button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {

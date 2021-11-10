@@ -18,7 +18,12 @@
         }
     }
     .lightbox__modal {
-        display: flex;
+        display: none;
+        @include when-inside('.lightbox-is-open') {
+            display: flex;
+            animation-name: lightbox-open;
+            animation-duration: 400ms;
+        }
         justify-content: center;
         align-items: center;
         position: fixed;
@@ -27,7 +32,7 @@
         width: 100vw;
         height: 100vh;
         padding: 0 1rem;
-        background-color: rgba(grey, .95);
+        background-color: rgba(black, .9);
         z-index: 99999;
         img {
             max-height: 90vh;
@@ -38,6 +43,37 @@
             text-align: center;
             color: color(neutral, 100);
             opacity: .9;
+        }
+    }
+    .lightbox__modal__close {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+        width: 3rem;
+        height: 3rem;
+        padding: 0;
+        opacity: .8;
+        transition: opacity .3s;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1.5rem;
+            height: .1875rem;
+            background-color: color(neutral, 100);
+            border-radius: $border-radius;
+            transition: transform .3s;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        @include on-event {
+            opacity: 1;
         }
     }
 }
